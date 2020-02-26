@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML学习轨迹</title>
+<style> 
+p {
+color:red;
+font-size: 20px;
+}
+.red-text{
+color: green;
+font-size: 30px;
+font-family: Lobster,Sans-serif;
+}
+
+.tupian1 {
+width: 100px;
+border-color: red;
+border-width: 20px;
+border-style: solid;
+}
+.tupian2 {
+border-radius:20px;
+}
+.tupian3{
+border-radius:40px;
+}
+.tupian4{
+border-radius:50px;
+}
+.tupian5{
+width: 100px;
+border-color: black;
+border-width: 1px;
+border-style: solid;
+border-radius:50%;
+}
+</style> 
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<h1>首先，你需要用 link 标签来引入谷歌Lobster字体。link标签在style里引起css解释不正常</h1>
+<h2 style="color:blue" >标签里style设置css</h2>
+<p> head里运用 选择器 {属性名称: 属性值;}   </p>
+<p>如果你希望元素使用 Helvetica 字体，
+但是当 Helvetica 不可用时也会降级为Sans-Serif 字体，
+则可以使用此CSS样式：font-family: Helvetica, Sans-Serif; </p>
+
+<span class="red-text"> class 类设置css</span>
+</br>
+<img class="tupian1" src="./img/kenan.jpg" alt="kenan">
+<p>img 元素具有 alt 属性。alt 属性中的文本用于屏幕阅读器以提高可访问性，
+并且如果图像无法加载，则会显示。</br>
+alt 属性， </br>
+是当图片无法显示时的替代文本。</br>
+alt 属性对于盲人或视觉障碍的用户理解图片中的内容非常重要，
+搜索引擎也会搜索alt 属性来了解图片的内容</p>
+<p>CSS包含一个 width 的属性，用于控制元素的宽度。就像使用字体一样，
+我们将使用 px（像素）来指定图片的宽度。</p>
+<p>CSS 边框具有 style(样式)、color(颜色)、width(宽度) 等属性。</p>
+<p>请记住，你可以应用多个class到一个元素，
+只需要在多个class之间用空格分开即可。例如：class="class1 class2"</p>
+<img class="tupian1 tupian2" src="./img/kenan.jpg" alt="kenan">
+<p>图片的边框目前有尖角。
+我们可以用一个叫 border-radius（边框半径）
+的CSS属性来改变它的边框变成圆角。
+
+你可以使用像素来指定 border-radius 的属性值，
+给你的猫咪图片的 border-radius 设定为10px。
+ ｛这里设置成100 会变成圆的图片 有点意思50% 同理｝
+ 这里可能跟border的属性有关 可以深入研究一下<br>
+ -------------------------------------------
+</p>
+<img class="tupian1 tupian3" src="./img/kenan.jpg" alt="kenan">
+
+<p>除了像素之外，你还可以使用百分比来指定 border-radius
+（边框半径）的值。
+
+给你的图片设定 border-radius 为 50%。出现圆</p>
+<img class="tupian1 tupian4" src="./img/kenan.jpg" alt="kenan">
+<P>这里猜测圆形出现跟border-radius有关 此处可以引申 </P>
+<img class="tupian5" src="./img/kenan.jpg" alt="kenan">
+
+<h2>嵌套</h2>
+<p>Nesting（嵌套）就是把一个元素放在另一个元素中。
+
+例如：
+
+Here's a <a href="https://www.w3cschool.cn"> link to W3Cschool.cn</a> for you to follow.</br>
+把a标签嵌入到P标签
+</p>
+
+
+<h2>unordered lists（无序列表）</h2>
+<p>带项目符号列表的特殊元素</p>
+<p> 无序列表以 ul 元素开始，并包含一个或多个 li 元素。</p>
+<p>例如</p>
+<ul>
+<li>无序</li><li>列表</li>
+<li>←</li><li>实心</li>
+</ul>
+<h2>ordered lists（有序列表）</h2>
+<p>数字编号列表的特殊元素</p>
+<p>有序列表以 ol 元素开始，并包含一个或多个 li 元素。</p>
+<p>例如</p>
+<ol>
+<li>hh</li>
+<li>oo</li>
+<li>aa</li>
+<li>xx</li>
+</ol>
+<p>这里可能有更多的style 先按下不表</p>
+
+<h2>文本输入</h2>
+<p>文本输入框是获取用户输入的一种方便的方法。
+
+你可以用如下方法创建：
+</br>
+input type="text"
+</br>
+<input type="text">
+</br>
+注意，input元素是自关闭的。</p>
+<p>placeholder text（占位符）是用户在 input 框输入任何内容之前放置在 input 框中的预定义文本。
+
+你可以创建如下所示的占位符：</br>
+input type="text" placeholder="this is placeholder text"</br>
+<input type="text" placeholder="this is placeholder text"></p>
+
+<h2>提交表单</h2>
+<p>你可以使用HTML来构建跟服务器交互的Web表单。</br>
+你可以通过在form元素上添加一个action属性来执行此操作。
+</br>
+action属性的值指定了表单提交到服务器的地址。
+</br>
+例如：</br>
+form action="/url-where-you-want-to-submit-form-data"   /form </br>
+<form action="/url-where-you-want-to-submit-form-data">123</form></p>
+<p>---------------------------------------</p>
+<p>把你的文本输入框嵌套到form元素中。</br>
+并为此form元素添加action="/submit-cat-photo"。</p>
+<form action="/submit-cat-photo">
+<input type="text" placeholder="cat photo URL">
+<button type="submit">Submit</button>
+</form>
+<p>对于表单，你可以指定某些选项为required（必填项），</br>
+只有当用户填写了该选项后，用户才能够提交表单。
+</p>
+<form action="/submit-cat-photo">
+<input type="text" placeholder="cat photo URL" required>
+<button type="submit">Submit</button>
+</form>
+<p></br>你可以使用单选按钮来解决你希望用户只给出一个答案的问题。</br>
+
+单选按钮是 input 输入框的一种类型。</br>
+
+每个单选按钮都应该嵌套在自己的 label(标签) 元素中。</br>
+
+所有关联的单选按钮应具有相同的 name 属性。</br>
+
+下面是一个单选按钮的例子：</br>
+
+《label>《input type="radio" name="indoor-outdoor"> Indoor《/label</p>
+<label><input type="radio" name="indoor-outdoor"> 1-1</label>
+<label><input type="radio" name="indoor-outdoor"> 1-2</label>
+<label><input type="radio" name="indoor-outdoor"> 1-3</label>
+</br></br></br>
+<label><input type="radio" name="2333"> 2-1</label>
+<label><input type="radio" name="2333"> 2-2</label>
+<label><input type="radio" name="2333"> 2-3</label>
+<div>hell word</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
