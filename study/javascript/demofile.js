@@ -200,7 +200,7 @@ var total = (1+4)*5;
 //<25
 
 var temp_fahrenheit =95;
-var temp_celsius = (temp_fahrenheit - 32) /1.8;
+var temp_celsius = (temp_fahrenheit - 32)/1.8;
 
 /* 
 >>temp_fahrenheit
@@ -293,7 +293,7 @@ message22 += year222;
 //<"The year is 2010"
 
 
-//2.4
+//2.4条件语句
 
 /*
 if (condition) {
@@ -301,6 +301,183 @@ if (condition) {
 }
 */
 if (1>2) {
-    alert("The world has gone mad!")
+    alert("The world has gone mad!");
 }
+//如果只包含一条语句可以写成
+
+if (1>2) alert("the world has gone mad!");
+
+
+if (1>2) {
+    alert("The world has gone mad!");
+}else{
+    document.write(" 由js 写入 条件语句 ==All is well with the world");
+}
+
+//条件判定 == > < >=
+var my_mood ="happy";
+var you_mood = "sad";
+if (my_mood == you_mood) {
+    alert("We both feel the same");
+}
+
+if (my_mood != you_mood) {
+    document.write("</br>对比 不等于 if (my_mood != you_mood)");
+}
+
+var a = false;
+var b = "";
+if (a == b ) {
+    document.write("</br>a equals b == 并不是真正的等于 === 会严格的比较 不仅比较值还比较变量的类型 !=同理用!==");
+}
+
+//2.4.2逻辑操作符
+document.write("</br>逻辑操作字符 && 逻辑与  ||逻辑或 操作两个布尔值 逻辑 非 !只能操作单个逻辑</br>");
+num = 7
+if (!(num > 10 || num < 5)) {
+    document.write("</br>if (!(num > 10 || num < 5))");
+}
+
+
+//2.5 循环
+
+/**
+*   while (condition) {
+*     
+*   }
+ */
+var count = 1 ;
+//这里为了不弹窗 把 while里的比较值变成了1
+while (count <1) {
+    alert (count);
+    count++;
+}
+//document.write(count)变量可以带出循环 
+/*
+
+do {
+    statements
+} while (condition);
+
+*/
+do {
+ //alert(count);
+    count++;
+} while (count<1);
+
+//2.5.2 for 循环
+/**
+for (var count = 1; count < 11 ; count++){
+    alert(count);
+
+}
+
+
+
+for (initial condition; test condition; alter condition) {
+    statements;
+    
+}
+ */
+
+
+var beatles25 = Array("Ringo","John","Paul","George");
+
+
+for (var count = 0; count < beatles25.length; count++) {
+ //alert太暴力 改成document.write
+    document.write("</br>"+(beatles25[count]));
+    
+}
+
+//2.6 函数
+
+//如果需要多次使用 同一段 代码 把他封装成一个函数 function 
+//、、作为一种良好的变成习惯， 应该先对函数做出定义再调用他们
+function shout() {
+    var beatles26 = Array("Ringo","John","Paul","George");
+    for (var count = 0; count < beatles26.length; count++) {
+    
+        alert(beatles26[count]);
+    }
+}
+//每当要反复做一件事 的时候 可以利用函数来避免重复键入大量相同内容
+//函数的真正内容你可以吧不同的数据传递给他们，而他们将使用这些数据完成预定操作
+
+function multiply(num1,num2) {
+    var total = num1 * num2;
+    alert(total);
+}
+//return 返回一个数值 字符串数组或者布尔值 
+function multiply2(num3,num4) {
+    var total1 = num3 * num4;
+    return(total1);
+}
+
+
+function convertToCelsius(temp) {
+    var result = temp - 32;
+    result = result/1.8;
+    return result;
+}
+//函数的真正价值体现在，我们还可以把他当做数据类型来使用
+//这就意味着可以把一个函数的调用结果赋给一个变量
+
+var temp_fahrenheit = 95;
+var temp_celsius = convertToCelsius(temp_fahrenheit);
+//alert(temp_celsius);
+
+//驼峰法命名  第二个单词开始 每个单词首写字母大写
+
+//变量作用域
+//全局变量          脚本的任何位置被引用
+
+//局部变量          只存在于声明他的那个函数内部
+
+//再函数内部 var 可以避免全局变量的影响
+
+//2.7变量
+/**
+ * 对象object{
+ * 属性property 隶属于某个特定对象的变量
+ * 方法method只有某个特定对象才能调用的函数
+ * }
+ */
+//“点”语法调用 
+// Object.Property
+// Object.method()
+
+
+//var jeremy = new Person;
+//创建出Person对象的一个新实例Jeremy。 用Person对象的属性来检索jeremy的信息
+//jeremy.age
+//jeremy.mood
+
+//2.7.1 内建对象
+ var beatles = new Array();
+//了解数组有多少元素时候用length
+ beatles.length;
+//其他的还有 Math Date
+//处理数值和日期值
+ var num27 = 7.561
+ var num27 = Math.round(num27);
+ 
+
+//Date可以用来储存和检索与特定日期和时间有关的信息
+//再创建Date对象的新实例时，javscript解释器将自动的使用当前日期和时间对比它进行初始化
+ var current_date = new Date();
+
+//Date对象提供了 getDay() getHours() getMonth() 等一系列方法供人们检索特定日期有关的各种信息
+ var today = current_date.getDay();
+//上面的例子是告诉我们今天星期几
+
+//编写脚本时 内建对象可以快速帮助我们简单的完成许多任务
+
+//2.2.2 宿主对象
+
+// 除了内建对象 脚本里使用一些已经预先定义好的对象 这些对象是由它所运行的环境提供的具体到web应用就是浏览器
+//Form Image Element 等都是宿主对象 document 等书中 以后介绍
+
+//2.8 小结
+//第二章完 2020.2.26 星期三 11:56
 
