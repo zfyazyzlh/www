@@ -60,11 +60,61 @@ console.log("%c%c苟利国家生死以，岂因祸福避趋之。","line-height:
 //          在DOM中  title = "agentle reminder" 是一个属性节点 attribute node 
 
 //3.4.4 CSS
-//
+// p{} ==><p>
+// .xxx ==> class=xxx
+// #xxx ==> id= xx
+// #xxx li ==> id =xxx <li>
+//ID就像一个挂钩一头链接着文档里的某个元素另一头联 CSS样式里的某个样式 DOM也可以用使用这种挂钩
 
-//
-//
-//
-//
-//
-//
+//3.4.5获取元素
+//三种方法
+// document.getElementById("id");  document对象特有的函数@！！！！
+// document.getElementsByTagName('tag'); 
+for (var i = 0; i < document.getElementsByTagName("p").length; i++) {
+    typeof document.getElementsByTagName("p")[i];
+    
+}
+
+//如果打字太多 可以
+var items = document.getElementsByTagName("p");
+for (var i = 0; i < items.length; i++) {
+    typeof  items[i];
+    
+}
+//document.getElementsByTagName  允许把一个通配符作为他的参数
+//这意味着文档里的每个元素都在这个函数所返回的数组里战友一席之地
+//通配符 * 必须放到引号里 以区分乘法
+
+//例如 想知道某份文档里有多少节点
+//alert( document.getElementsByTagName('*').length)
+
+//可以把 getElementById 跟 getElementsByTagName 结合起来用
+// 例如 想知道 某个id 包含多少个列表选项
+/**
+var shopping = document.getElementById("purchases");
+var items = shopping.getElementsByTagName("*");
+ */
+
+//执行完 item 数组只包含 purchase 里的元素
+//具体到这里 素组长度刚好与这份文档里的列表元素总数相等
+items.length;
+
+//如果还需要证据 下面证明数组里每个值为对象
+for (var i=0 ;    i < items.leng ;i++) {
+   //alert(typeof items[i]);
+    
+}
+
+
+//getElementsByClassName
+//H5 DOM 新加入的 让我们通过class中的类名访问元素 不过比较新某些DOM可能没有 当心使用
+
+//getElementsByClassName("class")
+
+//可以指定多个类名来查找带多个类的元素
+//getElementsByClassName("class1 class2")
+
+//查找 id 为 purchases 下带有sale类的元素跟上述例子相同
+
+
+
