@@ -1,3 +1,14 @@
+//控制台信息star
+console.log("%c%c博客名称%c再度重相逢","line-height:20px;","line-height:20px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px","color:#3fa9f5;line-height:20px;font-size:16px;");
+
+console.log("%c%c网站地址%chttp://www.zdcxf.com","line-height:20px;","line-height:20px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px","color:#ff9900;line-height:20px;font-size:16px;");
+
+console.log("%c%c企鹅号码%c3148028117","line-height:20px;","line-height:20px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px","color:#008000;line-height:20px;font-size:16px;");
+
+console.log("%c%c苟利国家生死以，岂因祸福避趋之。","line-height:20px;","line-height:20px;padding:4px 0px;color:#fff;font-size:16px;background-image:-webkit-gradient(linear,left top,right top,color-stop(0,#ff22ff),color-stop(1,#5500ff));color:transparent;-webkit-background-clip:text;");
+
+//控制台信息end
+
 //自我提醒的注释  注释单行
 /*这种注释
 可以多行注释
@@ -6,17 +17,6 @@
 
 /// <!--在html里必须把后边加上--> 
 // html风格的注释 最好不要在js里出现容易混淆!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//控制台信息star
-console.log("%c%c博客名称%czdcxf","line-height:28px;","line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px","color:#3fa9f5;line-height:28px;font-size:16px;");
-
-console.log("%c%c网站地址%chttp://www.zdcxf.com","line-height:28px;","line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px","color:#ff9900;line-height:28px;font-size:16px;");
-
-console.log("%c%c企鹅号码%c3148028117","line-height:28px;","line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px","color:#008000;line-height:28px;font-size:16px;");
-
-console.log("%c%c苟利国家生死以，岂因祸福避趋之。","line-height:28px;","line-height:28px;padding:4px 0px;color:#fff;font-size:16px;background-image:-webkit-gradient(linear,left top,right top,color-stop(0,#ff22ff),color-stop(1,#5500ff));color:transparent;-webkit-background-clip:text;");
-
-
-//控制台信息end
 var mood ;
 var age ;
 
